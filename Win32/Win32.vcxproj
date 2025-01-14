@@ -106,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\usr\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\usr\include;$(ProjectDir)Include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\usr\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\usr\include;$(ProjectDir)Include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,11 +135,13 @@
     <ClCompile Include="..\..\..\..\..\..\..\usr\src\tinyxml\tinyxml.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\usr\src\tinyxml\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\..\..\..\..\usr\src\tinyxml\tinyxmlparser.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\win32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\..\usr\include\tinyxml\tinystr.h" />
     <ClInclude Include="..\..\..\..\..\..\..\usr\include\tinyxml\tinyxml.h" />
+    <ClInclude Include="Include\win32.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
